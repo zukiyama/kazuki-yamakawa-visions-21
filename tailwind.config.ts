@@ -61,7 +61,33 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				/* Japanese design system colors */
+				ink: {
+					DEFAULT: 'hsl(var(--ink))',
+					light: 'hsl(var(--ink-light))'
+				},
+				paper: 'hsl(var(--paper))',
+				shadow: 'hsl(var(--shadow))',
+				'sun-red': 'hsl(var(--sun-red))',
+				mountain: 'hsl(var(--mountain))'
+			},
+			backgroundImage: {
+				'gradient-ink': 'var(--gradient-ink)',
+				'gradient-paper': 'var(--gradient-paper)',
+				'gradient-sunset': 'var(--gradient-sunset)'
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'ink': 'var(--shadow-ink)',
+				'accent': 'var(--shadow-accent)'
+			},
+			transitionTimingFunction: {
+				'zen': 'cubic-bezier(0.4, 0, 0.2, 1)',
+				'brush': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+			},
+			fontFamily: {
+				'japanese': ['Inter', 'Noto Sans JP', 'system-ui', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
