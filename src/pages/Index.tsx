@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import heroLandscape from '../assets/hero-landscape.jpg';
+import fallingObjectsBg from '../assets/falling-objects-bg.jpg';
 
 const Index = () => {
   return (
@@ -64,8 +65,18 @@ const Index = () => {
       </section>
       
       {/* About Preview */}
-      <section className="py-20 bg-card">
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="relative py-20 bg-card overflow-hidden">
+        {/* Falling Objects Background - Bottom Half */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-40"
+          style={{
+            backgroundImage: `url(${fallingObjectsBg})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        />
+        
+        <div className="relative z-10 max-w-6xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-light text-ink mb-6 font-japanese">

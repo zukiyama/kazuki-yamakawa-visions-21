@@ -4,7 +4,7 @@ import instrumentsSketch from '../assets/instruments-sketch.jpg';
 import summerHouseSketch from '../assets/summer-house-sketch.jpg';
 import colorImagination from '../assets/color-imagination.jpg';
 import retroElectronics from '../assets/retro-electronics.jpg';
-import robotToys from '../assets/robot-toys.jpg';
+import streetRobotScene from '../assets/street-robot-scene.jpg';
 
 const Music = () => {
   return (
@@ -83,19 +83,19 @@ const Music = () => {
             </div>
           </div>
 
-          {/* Robot Toys Section */}
+          {/* Street Robot Scene */}
           <div className="mb-16">
             <div className="bg-card rounded-sm shadow-soft overflow-hidden group hover:shadow-ink transition-all duration-300">
               <img 
-                src={robotToys} 
-                alt="Vintage Japanese robot toys" 
+                src={streetRobotScene} 
+                alt="Discarded robot toy on busy street" 
                 className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="p-8 text-center">
-                <h3 className="text-2xl font-light text-ink mb-4 font-japanese">Retro Future</h3>
+                <h3 className="text-2xl font-light text-ink mb-4 font-japanese">Lost Magic</h3>
                 <p className="text-ink-light leading-relaxed max-w-3xl mx-auto">
-                  Inspired by the optimistic futures imagined in the 1970s, 
-                  where robots were friends and technology was full of wonder.
+                  A bright 1970s toy robot with glowing LED eyes lies forgotten on a busy street, 
+                  its magic unnoticed by the rushing world around it.
                 </p>
               </div>
             </div>
