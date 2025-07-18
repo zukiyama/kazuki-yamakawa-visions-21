@@ -23,7 +23,7 @@ const Logo = ({ className = "" }: { className?: string }) => {
         
         {/* Moon (Circle) */}
         <div 
-          className="absolute top-4 right-1 w-6 h-6 rounded-full bg-sun-red transform -rotate-6 opacity-90"
+          className="absolute top-4 right-1 w-6 h-6 rounded-full bg-indigo-800 transform -rotate-6 opacity-90"
           style={{ filter: 'blur(0.3px)' }}
         />
         

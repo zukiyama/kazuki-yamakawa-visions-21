@@ -13,7 +13,7 @@ const Music = () => {
       
       {/* Background Sketches */}
       <div 
-        className="fixed inset-0 opacity-15 bg-cover bg-center z-0"
+        className="fixed inset-0 opacity-40 bg-cover bg-center z-0"
         style={{
           backgroundImage: `url(${instrumentsSketch})`,
           backgroundSize: 'cover',
@@ -30,7 +30,7 @@ const Music = () => {
             </h1>
             <div className="w-24 h-[1px] bg-sun-red mx-auto mb-8"></div>
             <p className="text-lg text-ink-light font-light leading-relaxed max-w-2xl mx-auto">
-              [Placeholder text] Musical compositions and audio-visual experiences that blend analog warmth with digital imagination.
+              Musical compositions and audio-visual experiences that blend analog warmth with digital imagination.
             </p>
           </div>
 
@@ -45,7 +45,7 @@ const Music = () => {
               <div className="p-8 text-center">
                 <h3 className="text-2xl font-light text-ink mb-4 font-japanese">Pure Imagination</h3>
                 <p className="text-ink-light leading-relaxed max-w-3xl mx-auto">
-                  [Placeholder text] Visual music videos that capture the essence of color and sound, 
+                  Visual music videos that capture the essence of color and sound, 
                   creating immersive experiences from pure imagination.
                 </p>
               </div>
@@ -63,7 +63,7 @@ const Music = () => {
               <div className="p-6">
                 <h3 className="text-lg font-light text-ink mb-2 font-japanese">The Studio</h3>
                 <p className="text-ink-light text-sm leading-relaxed">
-                  [Placeholder text] A peaceful space where acoustic instruments meet creative inspiration.
+                  A peaceful space where acoustic instruments meet creative inspiration.
                 </p>
               </div>
             </div>
@@ -77,7 +77,7 @@ const Music = () => {
               <div className="p-6">
                 <h3 className="text-lg font-light text-ink mb-2 font-japanese">Analog Soul</h3>
                 <p className="text-ink-light text-sm leading-relaxed">
-                  [Placeholder text] Classic synthesizers and tape machines that add warmth to digital creativity.
+                  Classic synthesizers and tape machines that add warmth to digital creativity.
                 </p>
               </div>
             </div>
@@ -94,7 +94,7 @@ const Music = () => {
               <div className="p-8 text-center">
                 <h3 className="text-2xl font-light text-ink mb-4 font-japanese">Retro Future</h3>
                 <p className="text-ink-light leading-relaxed max-w-3xl mx-auto">
-                  [Placeholder text] Inspired by the optimistic futures imagined in the 1970s, 
+                  Inspired by the optimistic futures imagined in the 1970s, 
                   where robots were friends and technology was full of wonder.
                 </p>
               </div>
@@ -108,7 +108,7 @@ const Music = () => {
                 Audio & Visual
               </h2>
               <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-                [Placeholder text] Musical compositions paired with AI-generated visuals will be featured here. 
+                Musical compositions paired with AI-generated visuals will be featured here. 
                 Each piece combines acoustic instruments with electronic elements.
               </p>
               <div className="w-16 h-[1px] bg-sun-red mx-auto"></div>

@@ -16,7 +16,7 @@ const About = () => {
       
       {/* Background 70s Objects */}
       <div 
-        className="fixed inset-0 opacity-10 bg-cover bg-center z-0"
+        className="fixed inset-0 opacity-20 bg-cover bg-center z-0"
         style={{
           backgroundImage: `url(${seventiesObjects})`,
           backgroundSize: 'cover',
@@ -27,7 +27,7 @@ const About = () => {
       <main className="relative z-10 pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6">
           {/* Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h1 className="text-4xl md:text-6xl font-light text-ink mb-6 font-japanese tracking-wide">
               KAIJU
             </h1>
@@ -35,129 +35,130 @@ const About = () => {
             <p className="text-xl text-ink-light font-light leading-relaxed max-w-3xl mx-auto">
               First book of the Parable Trilogy
             </p>
-            <p className="text-lg text-ink-light font-light leading-relaxed max-w-3xl mx-auto mt-4">
-              [Placeholder text] A philosophical metaphysical fantasy set in an alternate 1979 Japan. 
-              A group of boys in a small town discover that nothing is as it seems when strange events 
-              unfold during one unforgettable summer.
-            </p>
           </div>
 
-          {/* Story Images Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-            <div className="bg-card rounded-sm shadow-soft overflow-hidden group hover:shadow-ink transition-all duration-300">
-              <img 
-                src={boysGroup} 
-                alt="Group of boys in 1979 Japan" 
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-light text-ink mb-2 font-japanese">The Boys</h3>
-                <p className="text-ink-light text-sm leading-relaxed">
-                  [Placeholder text] Three friends discover their town holds secrets no one remembers.
-                </p>
+          {/* Scattered Polaroid-style Images */}
+          <div className="relative min-h-screen">
+            {/* First cluster with text */}
+            <div className="relative mb-16">
+              {/* Boy Group Polaroid */}
+              <div className="absolute left-12 top-0 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                <div className="bg-white p-4 shadow-lg rounded-sm">
+                  <img 
+                    src={boysGroup} 
+                    alt="Boys walking in town" 
+                    className="w-80 h-60 object-cover mb-2"
+                  />
+                  <p className="text-center text-sm text-gray-600 font-handwriting">Summer of '79</p>
+                </div>
+              </div>
+
+              {/* Playground Polaroid */}
+              <div className="absolute right-16 top-12 transform -rotate-2 hover:rotate-0 transition-transform duration-300">
+                <div className="bg-white p-4 shadow-lg rounded-sm">
+                  <img 
+                    src={playgroundScene} 
+                    alt="School playground" 
+                    className="w-72 h-54 object-cover mb-2"
+                  />
+                  <p className="text-center text-sm text-gray-600 font-handwriting">The school</p>
+                </div>
+              </div>
+
+              {/* Story Description */}
+              <div className="absolute left-1/2 top-80 transform -translate-x-1/2 max-w-2xl">
+                <div className="bg-card/90 rounded-sm shadow-soft p-8 backdrop-blur-sm">
+                  <p className="text-lg text-ink leading-relaxed mb-4">
+                    In a small Japanese town in the summer of 1979, three boys discover that nothing is as it seems. 
+                    Everyone's memories are fragmented—no one can remember how they ended up in this place.
+                  </p>
+                  <p className="text-lg text-ink leading-relaxed">
+                    As strange events unfold, the boys become embroiled in a mystery that reaches beyond their quiet town 
+                    to the nearby city of Kyoto, where something unbelievable has emerged from a fallen meteor.
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="bg-card rounded-sm shadow-soft overflow-hidden group hover:shadow-ink transition-all duration-300">
-              <img 
-                src={playgroundScene} 
-                alt="School playground with mysterious robot" 
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-light text-ink mb-2 font-japanese">The School</h3>
-                <p className="text-ink-light text-sm leading-relaxed">
-                  [Placeholder text] A residential school where small robots maintain order.
-                </p>
+            {/* Second cluster */}
+            <div className="relative mt-96 mb-16">
+              {/* Shadow Boy Polaroid */}
+              <div className="absolute left-8 top-20 transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div className="bg-white p-4 shadow-lg rounded-sm">
+                  <img 
+                    src={shadowBoy} 
+                    alt="Boy with giant shadow" 
+                    className="w-64 h-80 object-cover mb-2"
+                  />
+                  <p className="text-center text-sm text-gray-600 font-handwriting">When shadows grow</p>
+                </div>
+              </div>
+
+              {/* Shopping Street Polaroid */}
+              <div className="absolute right-12 top-0 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div className="bg-white p-4 shadow-lg rounded-sm">
+                  <img 
+                    src={shoppingStreet} 
+                    alt="Town shopping street" 
+                    className="w-84 h-56 object-cover mb-2"
+                  />
+                  <p className="text-center text-sm text-gray-600 font-handwriting">The dusty streets</p>
+                </div>
+              </div>
+
+              {/* Businessman Polaroid */}
+              <div className="absolute left-1/3 top-32 transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                <div className="bg-white p-4 shadow-lg rounded-sm">
+                  <img 
+                    src={businessmanWindow} 
+                    alt="Businessman at window" 
+                    className="w-72 h-54 object-cover mb-2"
+                  />
+                  <p className="text-center text-sm text-gray-600 font-handwriting">In distant Kyoto</p>
+                </div>
               </div>
             </div>
 
-            <div className="bg-card rounded-sm shadow-soft overflow-hidden group hover:shadow-ink transition-all duration-300">
-              <img 
-                src={shoppingStreet} 
-                alt="Boys shopping in dusty town" 
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-light text-ink mb-2 font-japanese">The Town</h3>
-                <p className="text-ink-light text-sm leading-relaxed">
-                  [Placeholder text] A dusty street where memories fade and questions multiply.
-                </p>
+            {/* Third cluster with final images */}
+            <div className="relative mt-80">
+              {/* Police Officer Polaroid */}
+              <div className="absolute left-16 top-0 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div className="bg-white p-4 shadow-lg rounded-sm">
+                  <img 
+                    src={policeOfficer} 
+                    alt="Police officer with robot" 
+                    className="w-76 h-58 object-cover mb-2"
+                  />
+                  <p className="text-center text-sm text-gray-600 font-handwriting">The guardian</p>
+                </div>
               </div>
-            </div>
 
-            <div className="bg-card rounded-sm shadow-soft overflow-hidden group hover:shadow-ink transition-all duration-300">
-              <img 
-                src={shadowBoy} 
-                alt="Boy with giant shadow" 
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-light text-ink mb-2 font-japanese">The Shadow</h3>
-                <p className="text-ink-light text-sm leading-relaxed">
-                  [Placeholder text] When reality bends, even shadows become something more.
-                </p>
+              {/* Parade Scene - Larger */}
+              <div className="absolute right-8 top-16 transform rotate-1 hover:rotate-0 transition-transform duration-300">
+                <div className="bg-white p-4 shadow-lg rounded-sm">
+                  <img 
+                    src={paradeScene} 
+                    alt="Festival parade" 
+                    className="w-96 h-64 object-cover mb-2"
+                  />
+                  <p className="text-center text-sm text-gray-600 font-handwriting">The festival masks everything</p>
+                </div>
               </div>
-            </div>
 
-            <div className="bg-card rounded-sm shadow-soft overflow-hidden group hover:shadow-ink transition-all duration-300">
-              <img 
-                src={businessmanWindow} 
-                alt="Businessman at office window" 
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-light text-ink mb-2 font-japanese">The City</h3>
-                <p className="text-ink-light text-sm leading-relaxed">
-                  [Placeholder text] In nearby Kyoto, unbelievable events begin to unfold.
-                </p>
+              {/* Final Story Text */}
+              <div className="absolute left-1/2 top-96 transform -translate-x-1/2 max-w-2xl">
+                <div className="bg-gradient-ink text-primary-foreground rounded-sm shadow-ink p-8">
+                  <h2 className="text-2xl font-light mb-4 font-japanese text-center">
+                    A Metaphysical Fantasy
+                  </h2>
+                  <p className="text-lg opacity-90 mb-4 text-center">
+                    KAIJU explores themes of memory, identity, and the thin line between the ordinary and extraordinary. 
+                    As reality bends and the impossible becomes tangible, three boys must navigate a world where 
+                    nothing can be trusted—not even their own recollections.
+                  </p>
+                  <div className="w-16 h-[1px] bg-sun-red mx-auto mt-6"></div>
+                </div>
               </div>
-            </div>
-
-            <div className="bg-card rounded-sm shadow-soft overflow-hidden group hover:shadow-ink transition-all duration-300">
-              <img 
-                src={policeOfficer} 
-                alt="Police officer with robot companion" 
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-6">
-                <h3 className="text-lg font-light text-ink mb-2 font-japanese">The Guardian</h3>
-                <p className="text-ink-light text-sm leading-relaxed">
-                  [Placeholder text] A police officer and her robot companion face the unknown.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Parade Scene - Full Width */}
-          <div className="mb-20">
-            <div className="bg-card rounded-sm shadow-soft overflow-hidden group hover:shadow-ink transition-all duration-300">
-              <img 
-                src={paradeScene} 
-                alt="Parade scene in Kyoto" 
-                className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-8 text-center">
-                <h3 className="text-2xl font-light text-ink mb-4 font-japanese">The Parade</h3>
-                <p className="text-ink-light leading-relaxed max-w-3xl mx-auto">
-                  [Placeholder text] In Kyoto, a festival masks the emergence of something extraordinary. 
-                  Children watch in wonder as balloons fill the sky and reality begins to shift.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Book Info */}
-          <div className="text-center">
-            <div className="bg-gradient-ink text-primary-foreground rounded-sm shadow-ink p-8 md:p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-light mb-4 font-japanese">
-                Coming Soon
-              </h2>
-              <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-                [Placeholder text] The first book of the Parable Trilogy will explore themes of memory, 
-                identity, and the thin line between the ordinary and the extraordinary.
-              </p>
-              <div className="w-16 h-[1px] bg-sun-red mx-auto"></div>
             </div>
           </div>
         </div>

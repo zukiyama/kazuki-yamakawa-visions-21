@@ -33,7 +33,7 @@ const Index = () => {
           <div className="w-32 h-[1px] bg-sun-red mx-auto mb-8"></div>
           
           <p className="text-xl md:text-2xl font-light text-ink-light leading-relaxed mb-12 max-w-2xl mx-auto">
-            [Placeholder text that can be edited]
+            Writer. Musician. Creator of stories that blur the line between dreams and reality.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -51,42 +51,16 @@ const Index = () => {
               Listen to Music
               <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">♪</span>
             </Link>
+            <Link 
+              to="/comic"
+              className="group border border-ink text-ink px-8 py-4 rounded-sm font-japanese tracking-wide transition-all duration-300 hover:bg-ink hover:text-primary-foreground hover:shadow-ink"
+            >
+              Read Web Comics
+              <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">◯</span>
+            </Link>
           </div>
         </div>
         
-        {/* Animated Elements */}
-        <div className="absolute bottom-20 left-10 opacity-30 animate-sway">
-          <div className="w-2 h-16 bg-sun-red transform rotate-12"></div>
-        </div>
-        <div className="absolute top-32 right-16 opacity-20 animate-float-gentle">
-          <div className="w-8 h-8 rounded-full bg-mountain"></div>
-        </div>
-        
-        {/* Distant Birds */}
-        <div className="absolute top-1/4 left-1/4 opacity-40 animate-drift">
-          <div className="flex space-x-8">
-            <div className="w-1 h-1 bg-ink-light rounded-full"></div>
-            <div className="w-1 h-1 bg-ink-light rounded-full"></div>
-          </div>
-        </div>
-        
-        {/* Sparkles */}
-        <div className="absolute top-1/3 right-1/3 opacity-50 animate-sparkle">
-          <div className="w-1 h-1 bg-sun-red rounded-full"></div>
-        </div>
-        <div className="absolute bottom-1/3 left-1/3 opacity-40 animate-sparkle" style={{ animationDelay: '1s' }}>
-          <div className="w-1 h-1 bg-sun-red rounded-full"></div>
-        </div>
-        
-        {/* Water Ripples */}
-        <div className="absolute bottom-1/4 right-1/4 opacity-30 animate-ripple">
-          <div className="w-4 h-4 border border-ink-light rounded-full"></div>
-        </div>
-        
-        {/* Swaying Grass */}
-        <div className="absolute bottom-16 right-20 opacity-20 animate-sway" style={{ animationDelay: '0.5s' }}>
-          <div className="w-0.5 h-8 bg-mountain"></div>
-        </div>
       </section>
       
       {/* About Preview */}
