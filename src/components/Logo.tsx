@@ -13,31 +13,29 @@ const Logo = ({ className = "" }: { className?: string }) => {
         </span>
       </div>
       
-      {/* Abstract Art Elements */}
+      {/* Modern Abstract Art Elements */}
       <div className="relative w-16 h-16 ml-6">
-        {/* Mountain (Triangle) */}
-        <div 
-          className="absolute top-2 left-2 w-0 h-0 border-l-[12px] border-r-[12px] border-b-[20px] border-l-transparent border-r-transparent border-b-mountain transform rotate-12"
-          style={{ filter: 'blur(0.5px)' }}
-        />
-        
-        {/* Moon (Circle) */}
-        <div 
-          className="absolute top-4 right-1 w-6 h-6 rounded-full bg-indigo-800 transform -rotate-6 opacity-90"
-          style={{ filter: 'blur(0.3px)' }}
-        />
-        
-        {/* River (Converging Lines) */}
-        <div className="absolute bottom-2 left-4">
-          <div 
-            className="w-8 h-[2px] bg-ink transform rotate-[15deg] origin-left"
-            style={{ filter: 'blur(0.2px)' }}
-          />
-          <div 
-            className="w-6 h-[2px] bg-ink-light transform rotate-[25deg] origin-left translate-y-1"
-            style={{ filter: 'blur(0.2px)' }}
-          />
-        </div>
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* Wavy converging lines */}
+          <path d="M8 20 Q32 16 56 24" stroke="hsl(var(--ink))" strokeWidth="2" fill="none"/>
+          <path d="M8 44 Q32 48 56 40" stroke="hsl(var(--ink-light))" strokeWidth="2" fill="none"/>
+          
+          {/* Overlapping triangle and circle with modern blend */}
+          <defs>
+            <filter id="modernBlend">
+              <feBlend mode="multiply"/>
+            </filter>
+          </defs>
+          
+          {/* Triangle */}
+          <polygon points="35,20 47,20 41,32" fill="hsl(var(--mountain))" opacity="0.8" transform="rotate(12 41 26)"/>
+          
+          {/* Circle with overlap effect */}
+          <circle cx="44" cy="28" r="8" fill="rgb(67, 56, 202)" opacity="0.7"/>
+          
+          {/* Overlap blend area creates color shift */}
+          <polygon points="38,24 42,20 46,24 42,28" fill="hsl(var(--ink))" opacity="0.5"/>
+        </svg>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ const Index = () => {
       <section 
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `url(${heroLandscape})`,
+          backgroundImage: `url(${require('../assets/canvas-painting-3d.jpg')})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
