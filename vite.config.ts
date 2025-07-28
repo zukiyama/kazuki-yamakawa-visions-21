@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
+    base: '/kazuki-yamakawa-visions/', //
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
