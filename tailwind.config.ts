@@ -87,7 +87,9 @@ export default {
 				'brush': 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
 			},
 			fontFamily: {
-				'japanese': ['Inter', 'Noto Sans JP', 'system-ui', 'sans-serif']
+				'japanese': ['Inter', 'Noto Sans JP', 'system-ui', 'sans-serif'],
+				'elegant': ['Playfair Display', 'serif'],
+				'body': ['Crimson Text', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
