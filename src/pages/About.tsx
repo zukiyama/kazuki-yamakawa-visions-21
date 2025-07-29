@@ -288,6 +288,99 @@ const About = () => {
           </div>
         </main>
       </section>
+
+      {/* Young Adult Novels Slideshow Section */}
+      <section className="relative min-h-screen bg-gradient-soft overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light text-ink mb-6 font-japanese tracking-wide">
+              Young Adult Novels
+            </h2>
+            <div className="w-24 h-[1px] bg-sun-red mx-auto mb-8"></div>
+            <p className="text-lg text-ink-light font-light leading-relaxed max-w-2xl mx-auto">
+              Coming-of-age stories exploring identity, purpose, and the extraordinary within the ordinary.
+            </p>
+          </div>
+
+          {/* To Fly */}
+          <div className="grid md:grid-cols-2 gap-12 mb-20 max-w-6xl mx-auto">
+            <div className="order-2 md:order-1 bg-card/90 rounded-sm shadow-soft p-8 backdrop-blur-sm">
+              <h3 className="text-2xl font-light text-ink mb-4 font-japanese">To Fly</h3>
+              <div className="w-16 h-[1px] bg-sun-red mb-6"></div>
+              <p className="text-ink leading-relaxed mb-4">
+                "The war was already over and we lost." Isaac, quiet and shy, can't believe he's been selected as one of the special kids for a secret academy. 
+              </p>
+              <p className="text-ink leading-relaxed mb-4">
+                The academy trains test pilots, but Isaac has one problem - he can't fly. While losing his way in the surrounding forest, he sees impossible things that shouldn't be there.
+              </p>
+              <p className="text-ink-light leading-relaxed">
+                As he loses his way, Isaac begins to find himself in this story of aliens, hidden academies, and discovering your own path.
+              </p>
+            </div>
+            <div className="order-1 md:order-2 flex justify-center">
+              <div className="bg-card rounded-sm shadow-ink overflow-hidden hover:shadow-sun-red/20 transition-all duration-300 transform hover:scale-105">
+                <img 
+                  src="/src/assets/to-fly-cover.jpg" 
+                  alt="To Fly novel cover" 
+                  className="w-full max-w-sm h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Professor Barnabas and Darwin */}
+          <div className="grid md:grid-cols-2 gap-12 mb-20 max-w-6xl mx-auto">
+            <div className="flex justify-center">
+              <div className="bg-card rounded-sm shadow-ink overflow-hidden hover:shadow-sun-red/20 transition-all duration-300 transform hover:scale-105">
+                <img 
+                  src="/src/assets/professor-barnabas-cover.jpg" 
+                  alt="Professor Barnabas and Darwin novel cover" 
+                  className="w-full max-w-sm h-auto object-cover"
+                />
+              </div>
+            </div>
+            <div className="bg-card/90 rounded-sm shadow-soft p-8 backdrop-blur-sm">
+              <h3 className="text-2xl font-light text-ink mb-4 font-japanese">Professor Barnabas and Darwin</h3>
+              <div className="w-16 h-[1px] bg-sun-red mb-6"></div>
+              <p className="text-ink leading-relaxed mb-4">
+                Set in Victorian London, a young boy works as an errand boy at an eccentric curiosity shop, fetching strange and peculiar items for the mysterious Professor Barnabas.
+              </p>
+              <p className="text-ink leading-relaxed mb-4">
+                Here he discovers a new London beneath London called "Undon," where mysterious figures from England's past and future seem to live together still.
+              </p>
+              <p className="text-ink-light leading-relaxed">
+                Together they encounter their enemy for the first time: Renard, a mysterious figure with dark intentions.
+              </p>
+            </div>
+          </div>
+
+          {/* The Land is the Dream of the Sky */}
+          <div className="grid md:grid-cols-2 gap-12 mb-20 max-w-6xl mx-auto">
+            <div className="order-2 md:order-1 bg-card/90 rounded-sm shadow-soft p-8 backdrop-blur-sm">
+              <h3 className="text-2xl font-light text-ink mb-4 font-japanese">The Land is the Dream of the Sky</h3>
+              <div className="w-16 h-[1px] bg-sun-red mb-6"></div>
+              <p className="text-ink leading-relaxed mb-4">
+                Book one of the White Trilogy. A young blind prince lives in a walled town in a wasteland, the only human among robots, never allowed outside.
+              </p>
+              <p className="text-ink leading-relaxed mb-4">
+                The arrival of a strange robot pilgrim from outside makes him question his captivity. When he finally decides to leave, he discovers his town has been destroyed.
+              </p>
+              <p className="text-ink-light leading-relaxed">
+                Alone except for his annoying robot companion, they journey through the wasteland seeking the secrets of the world and his true identity.
+              </p>
+            </div>
+            <div className="order-1 md:order-2 flex justify-center">
+              <div className="bg-card rounded-sm shadow-ink overflow-hidden hover:shadow-sun-red/20 transition-all duration-300 transform hover:scale-105">
+                <img 
+                  src="/src/assets/land-dream-sky-cover.jpg" 
+                  alt="The Land is the Dream of the Sky novel cover" 
+                  className="w-full max-w-sm h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
