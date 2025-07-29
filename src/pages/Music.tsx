@@ -5,6 +5,7 @@ import magicalGardens from '../assets/magical-mansion-gardens.jpg';
 import vintageTV from '../assets/vintage-russian-tv.jpg';
 import tvShopWindow from '../assets/tv-shop-window.jpg';
 import boysWalking from '../assets/boys-walking-behind.jpg';
+import animalOrchestra from '../assets/animal-orchestra-sketch.jpg';
 
 const Music = () => {
   const [selectedTrack, setSelectedTrack] = useState(0);
@@ -138,6 +139,20 @@ const Music = () => {
                     </div>
                   </button>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Animal Orchestra Section */}
+          <div className="mt-20 mb-16">
+            <div className="max-w-4xl mx-auto bg-paper/95 backdrop-blur-sm rounded-sm shadow-soft p-8">
+              <h3 className="text-2xl font-elegant text-ink mb-6 text-center">The Orchestra</h3>
+              <div className="relative overflow-hidden rounded-sm">
+                <img 
+                  src={animalOrchestra} 
+                  alt="Surreal animal orchestra with fantastical instruments" 
+                  className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-300"
+                />
               </div>
             </div>
           </div>
