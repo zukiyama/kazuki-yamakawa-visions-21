@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import heroLandscape from '../assets/hero-landscape.jpg';
 import fallingObjectsBg from '../assets/falling-objects-bg.jpg';
+import canvasPainting3d from '../assets/canvas-painting-3d.jpg';
 
 const Index = () => {
   return (
@@ -13,7 +14,7 @@ const Index = () => {
       <section 
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `url(${require('../assets/canvas-painting-3d.jpg')})`,
+          backgroundImage: `url(${canvasPainting3d})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
