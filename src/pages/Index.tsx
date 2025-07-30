@@ -55,11 +55,22 @@ const Index = () => {
           }}
         />
 
-        {/* PARABLE Title */}
+        {/* Main Title Text */}
         <div className="fixed inset-0 flex items-center justify-center z-30">
-          <h1 className="text-8xl md:text-9xl font-elegant text-paper drop-shadow-lg tracking-wider">
-            PARABLE
-          </h1>
+          <div className="text-center">
+            <h1 className="text-8xl md:text-9xl font-elegant text-paper drop-shadow-lg tracking-wider mb-4">
+              PARABLE
+            </h1>
+            <h2 className="text-4xl md:text-5xl font-elegant text-paper/90 drop-shadow-lg tracking-wide mb-2">
+              BOOK ONE
+            </h2>
+            <h3 className="text-3xl md:text-4xl font-elegant text-paper/80 drop-shadow-lg tracking-wide mb-2">
+              KAIJU
+            </h3>
+            <p className="text-2xl md:text-3xl font-elegant text-paper/70 drop-shadow-lg tracking-wide">
+              COMING SOON
+            </p>
+          </div>
         </div>
 
         {/* Magazine Cover Layer - Animated */}
@@ -80,12 +91,12 @@ const Index = () => {
               backgroundRepeat: 'no-repeat'
             }}
           >
-            {/* PARABLE Cutout Letters - Top Right */}
+            {/* PARABLE Cutout Letters - Top Right - Bold 1970s Style */}
             <div className="absolute top-16 right-16 z-20">
-              <div className="text-6xl md:text-8xl font-elegant text-paper font-bold leading-tight">
-                <div className="mb-2">PAR</div>
-                <div className="ml-8 mb-2">AB</div>
-                <div className="ml-16">LE</div>
+              <div className="text-6xl md:text-8xl text-paper font-black leading-tight" style={{ fontFamily: 'Impact, Arial Black, sans-serif', textShadow: '3px 3px 0px rgba(0,0,0,0.8)' }}>
+                <div className="mb-2 font-black">PAR</div>
+                <div className="ml-8 mb-2 font-black">AB</div>
+                <div className="ml-16 font-black">LE</div>
               </div>
             </div>
 
@@ -102,9 +113,9 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Floating Quote */}
+        {/* Floating Quote - Repositioned */}
         <div 
-          className={`fixed inset-0 flex items-center justify-center z-40 transition-opacity duration-2000 ${
+          className={`fixed bottom-32 left-1/2 transform -translate-x-1/2 z-40 transition-opacity duration-2000 ${
             showQuote ? 'opacity-100' : 'opacity-0'
           }`}
         >
@@ -115,7 +126,7 @@ const Index = () => {
               <span className="text-4xl ml-2 font-elegant">thoughts</span>
               <br />
               <span className="text-2xl">of the</span>
-              <span className="italic text-5xl ml-2 text-sun-red">heart</span>
+              <span className="italic text-5xl ml-2">heart</span>
             </div>
           </div>
         </div>

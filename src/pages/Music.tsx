@@ -34,10 +34,10 @@ const Music = () => {
           
           {/* Music Room Section */}
           <div className="mb-20 relative">
-            <div className="grid lg:grid-cols-2 gap-0 bg-paper/90 backdrop-blur-sm rounded-sm shadow-soft overflow-hidden">
-              {/* Pencil Sketch Interior */}
+            <div className="bg-paper/90 backdrop-blur-sm rounded-sm shadow-soft overflow-hidden">
+              {/* Single Multimedia Image - Pencil Sketch Room with Photographic Garden */}
               <div 
-                className="relative h-96 lg:h-[600px]"
+                className="relative h-96 lg:h-[600px] w-full"
                 style={{
                   backgroundImage: `url(${musicRoomSketch})`,
                   backgroundSize: 'cover',
@@ -45,22 +45,12 @@ const Music = () => {
                 }}
               >
                 <div className="absolute inset-0 bg-white/10"></div>
-              </div>
-              
-              {/* Magical Garden View */}
-              <div 
-                className="relative h-96 lg:h-[600px]"
-                style={{
-                  backgroundImage: `url(${magicalGardens})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-l from-transparent to-paper/20"></div>
-                {/* Magical sparkles */}
-                <div className="absolute top-20 left-10 w-2 h-2 bg-sun-red/60 rounded-full animate-sparkle"></div>
-                <div className="absolute bottom-32 right-16 w-1 h-1 bg-mountain/40 rounded-full animate-sparkle" style={{ animationDelay: '1s' }}></div>
-                <div className="absolute top-40 right-8 w-1.5 h-1.5 bg-ink/30 rounded-full animate-sparkle" style={{ animationDelay: '2s' }}></div>
+                {/* Coming Soon text overlay on garden area */}
+                <div className="absolute top-1/2 right-1/4 transform -translate-y-1/2">
+                  <h3 className="text-4xl font-elegant text-white drop-shadow-lg bg-black/30 px-4 py-2 rounded">
+                    COMING SOON
+                  </h3>
+                </div>
               </div>
             </div>
             
