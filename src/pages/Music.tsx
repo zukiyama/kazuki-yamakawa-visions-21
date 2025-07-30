@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
-import musicRoomSketch from '../assets/music-room-sketch.jpg';
-import magicalGardens from '../assets/magical-mansion-gardens.jpg';
-import vintageTV from '../assets/vintage-russian-tv.jpg';
-import tvShopWindow from '../assets/tv-shop-window.jpg';
-import boysWalking from '../assets/boys-walking-behind.jpg';
+import musicRoomGarden from '../assets/music-room-garden.jpg';
+import tvShopBoys from '../assets/tv-shop-boys.jpg';
 import animalOrchestra from '../assets/animal-orchestra-sketch.jpg';
 
 const Music = () => {
@@ -21,6 +18,16 @@ const Music = () => {
     <div className="min-h-screen bg-gradient-paper relative overflow-hidden">
       <Navigation />
       
+      {/* Background TV Shop with Boys */}
+      <div 
+        className="fixed inset-0 opacity-30 bg-cover bg-center z-0"
+        style={{
+          backgroundImage: `url(${tvShopBoys})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      
       {/* Decorative objects scattered around */}
       <div className="fixed top-20 right-10 w-8 h-8 opacity-30 rotate-45 z-0">
         <div className="w-full h-full bg-ink/20 rounded-full"></div>
@@ -36,77 +43,14 @@ const Music = () => {
           <div className="mb-20 relative">
             <div className="bg-paper/90 backdrop-blur-sm rounded-sm shadow-soft overflow-hidden">
               {/* Single Multimedia Image - Pencil Sketch Room with Photographic Garden */}
-              <div 
-                className="relative h-96 lg:h-[600px] w-full"
-                style={{
-                  backgroundImage: `url(${musicRoomSketch})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-              >
-                <div className="absolute inset-0 bg-white/10"></div>
-                {/* Coming Soon text overlay on garden area */}
-                <div className="absolute top-1/2 right-1/4 transform -translate-y-1/2">
-                  <h3 className="text-4xl font-elegant text-white drop-shadow-lg bg-black/30 px-4 py-2 rounded">
-                    COMING SOON
-                  </h3>
-                </div>
-              </div>
-            </div>
-            
-            {/* Album Info Overlay */}
-            <div className="absolute top-8 left-8 bg-ink/80 backdrop-blur-sm text-primary-foreground p-6 rounded-sm">
-              <h1 className="text-3xl font-elegant mb-2">Coming Soon</h1>
-              <div className="text-5xl font-elegant opacity-60">I</div>
+              <img 
+                src={musicRoomGarden} 
+                alt="Music room with garden view" 
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
 
-          {/* TV Section */}
-          <div className="relative mb-16">
-            {/* TV Shop Background */}
-            <div 
-              className="absolute inset-0 opacity-60"
-              style={{
-                backgroundImage: `url(${tvShopWindow})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              }}
-            >
-              {/* Boys walking silhouette at edge */}
-              <div 
-                className="absolute bottom-0 right-0 w-32 h-24 opacity-40"
-                style={{
-                  backgroundImage: `url(${boysWalking})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'right bottom'
-                }}
-              />
-            </div>
-            
-            {/* Main TV Video Player */}
-            <div className="relative z-10 max-w-4xl mx-auto">
-              <div className="bg-gradient-ink/90 backdrop-blur-sm p-8 rounded-sm">
-                <div 
-                  className="relative bg-black rounded-sm overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105"
-                  onClick={() => setIsFullscreen(!isFullscreen)}
-                  style={{
-                    backgroundImage: `url(${vintageTV})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                  }}
-                >
-                  {/* TV Screen Area */}
-                  <div className="aspect-video bg-black/80 m-8 rounded-sm flex items-center justify-center">
-                    <div className="text-center text-primary-foreground">
-                      <div className="text-6xl mb-4 opacity-60">▶</div>
-                      <p className="text-lg font-body">No videos available yet</p>
-                      <p className="text-sm opacity-60 mt-2">Click for fullscreen mode</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
           {/* Track Selector */}
           <div className="max-w-4xl mx-auto">

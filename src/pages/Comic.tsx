@@ -2,8 +2,8 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import characterSketches from '../assets/character-sketches.jpg';
 import godOfLiesCover from '../assets/god-of-lies-cover-new.jpg';
-import soulTiedCover from '../assets/soul-tied-cover.jpg';
-import burdenCover from '../assets/burden-cover.jpg';
+import soulTiedCover from '../assets/seoul-tied-cover.jpg';
+import burdenCover from '../assets/burden-cover-new.jpg';
 
 const Comic = () => {
   return (
@@ -79,7 +79,7 @@ const Comic = () => {
             {/* Story Summary */}
             <div className="bg-card/90 rounded-sm shadow-soft p-8 backdrop-blur-sm">
               <h2 className="text-3xl font-light text-ink mb-6 font-elegant">
-                Soul Tied
+                Seoul Tied
               </h2>
               <div className="w-16 h-[1px] bg-sun-red mb-6"></div>
               <p className="text-lg text-ink leading-relaxed mb-4 font-body">
@@ -100,7 +100,7 @@ const Comic = () => {
               <div className="bg-card rounded-sm shadow-ink overflow-hidden hover:shadow-sun-red/20 transition-all duration-300 transform hover:scale-105">
                 <img 
                   src={soulTiedCover} 
-                  alt="Soul Tied webtoon cover" 
+                  alt="Seoul Tied webtoon cover"
                   className="w-full max-w-sm h-auto object-cover"
                 />
               </div>

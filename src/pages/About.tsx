@@ -14,6 +14,10 @@ import policeOfficer from '../assets/police-officer.jpg';
 import paradeScene from '../assets/parade-scene.jpg';
 import seventiesObjects from '../assets/70s-objects.jpg';
 import boysWalkingBehind from '../assets/boys-walking-behind.jpg';
+import kyotoMonsterView from '../assets/kyoto-monster-view.jpg';
+import hoaxCommune from '../assets/hoax-commune.jpg';
+import toFlyNew from '../assets/to-fly-cover-new.jpg';
+import landDreamSkyNew from '../assets/land-dream-sky-cover-new.jpg';
 import hoaxAustraliaBg from '../assets/hoax-australia-bg.jpg';
 import marketCorporateBg from '../assets/market-corporate-bg.jpg';
 import obaZimbabweBg from '../assets/oba-zimbabwe-bg.jpg';
@@ -23,8 +27,8 @@ const About = () => {
   const youngAdultBooks = [
     {
       title: "To Fly",
-      summary: '"The war was already over and we lost." Isaac, quiet and shy, can\'t believe he\'s been selected as one of the special kids for a secret academy. The academy trains test pilots, but Isaac has one problem - he can\'t fly. While losing his way in the surrounding forest, he sees impossible things that shouldn\'t be there. As he loses his way, Isaac begins to find himself in this story of aliens, hidden academies, and discovering your own path.',
-      cover: toFlyCover
+      summary: '"The war was already over and we lost." Isaac, quiet and shy, can\'t believe he\'s been selected as one of the special kids for a secret academy. The academy trains test pilots for a new type of spaceship during a war against aliens, but Isaac has one problem - he can\'t fly. While losing his way in the surrounding forest, he sees impossible things that shouldn\'t be there. As he loses his way, Isaac begins to find himself in this story of aliens, hidden academies, and discovering your own path.',
+      cover: toFlyNew
     },
     {
       title: "Professor Barnabas and Darwin",
@@ -33,8 +37,8 @@ const About = () => {
     },
     {
       title: "The Land is the Dream of the Sky",
-      summary: "Mila has always been able to see things others can't - patterns in nature, connections between seemingly unrelated events. When her family moves to a remote mountain village, she discovers that her unusual perspective might be exactly what the community needs to solve an ancient mystery threatening their way of life.",
-      cover: landDreamSkyCover
+      summary: "A young blind human boy lives in a holy city surrounded by grey wasteland. Robot pilgrims come to the city, and one tells him that he may be being kept inside rather than protected. When his father, who runs the city, is away, the boy decides to sneak outside. But the city is destroyed by stranger invaders, leaving him alone to discover the truth about his world.",
+      cover: landDreamSkyNew
     }
   ];
 
@@ -57,13 +61,20 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-6">
             {/* Header */}
             <div className="text-center mb-20">
-              <h1 className="text-4xl md:text-6xl font-light text-ink mb-6 font-japanese tracking-wide">
-                KAIJU
-              </h1>
-              <div className="w-24 h-[1px] bg-sun-red mx-auto mb-8"></div>
-              <p className="text-xl text-ink-light font-light leading-relaxed max-w-3xl mx-auto">
-                First book of the Parable Trilogy
-              </p>
+              <div className="bg-white/10 backdrop-blur-sm rounded-sm p-8 inline-block">
+                <h1 className="text-4xl md:text-6xl font-light text-ink mb-6 font-japanese tracking-wide">
+                  PARABLE
+                </h1>
+                <h2 className="text-2xl md:text-3xl font-light text-ink mb-4 font-japanese">
+                  BOOK ONE OF THE PARABLE TRILOGY
+                </h2>
+                <h3 className="text-xl md:text-2xl font-light text-ink mb-4 font-japanese">
+                  KAIJU
+                </h3>
+                <p className="text-lg text-ink-light font-light">
+                  COMING SOON
+                </p>
+              </div>
             </div>
 
             {/* Images scattered like Polaroids */}
@@ -76,7 +87,7 @@ const About = () => {
                     alt="Boys walking in small Japanese town" 
                     className="w-80 h-52 object-cover mb-2"
                   />
-                  <p className="text-center text-sm text-gray-600 font-handwriting">Summer of '79 - Three friends</p>
+                  
                 </div>
               </div>
 
@@ -88,7 +99,7 @@ const About = () => {
                     alt="Police officer with robot in desert" 
                     className="w-80 h-52 object-cover mb-2"
                   />
-                  <p className="text-center text-sm text-gray-600 font-handwriting">The guardian and her companion</p>
+                  
                 </div>
               </div>
 
@@ -100,7 +111,7 @@ const About = () => {
                     alt="Festival parade with strange floats" 
                     className="w-96 h-64 object-cover mb-2"
                   />
-                  <p className="text-center text-sm text-gray-600 font-handwriting">The festival masks everything</p>
+                  
                 </div>
               </div>
 
@@ -112,7 +123,7 @@ const About = () => {
                     alt="Boys walking behind in Japanese town" 
                     className="w-80 h-52 object-cover mb-2"
                   />
-                  <p className="text-center text-sm text-gray-600 font-handwriting">Walking towards tomorrow</p>
+                  
                 </div>
               </div>
 
@@ -141,7 +152,7 @@ const About = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center z-0"
           style={{
-            backgroundImage: `url(${hoaxAustraliaBg})`,
+            backgroundImage: `url(${hoaxCommune})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}
@@ -222,6 +233,28 @@ const About = () => {
             </div>
           </div>
         </main>
+      </section>
+
+      {/* Young Adult Novels Slideshow Section */}
+      <section className="relative min-h-screen bg-gradient-soft overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light text-ink mb-6 font-japanese tracking-wide">
+              Young Adult Novels
+            </h2>
+            <div className="w-24 h-[1px] bg-sun-red mx-auto mb-8"></div>
+            <p className="text-lg text-ink-light font-light leading-relaxed max-w-2xl mx-auto">
+              Coming-of-age stories exploring identity, purpose, and the extraordinary within the ordinary.
+            </p>
+          </div>
+
+          <BookSlideshow books={youngAdultBooks} />
+        </div>
+
+        {/* Contact Footer */}
+        <div className="absolute bottom-4 right-4 text-ink/60 font-body text-sm">
+          Email: Contact details coming soon
+        </div>
       </section>
 
       {/* OBA Section */}
@@ -310,28 +343,6 @@ const About = () => {
             </div>
           </div>
         </main>
-      </section>
-
-      {/* Young Adult Novels Slideshow Section */}
-      <section className="relative min-h-screen bg-gradient-soft overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-ink mb-6 font-japanese tracking-wide">
-              Young Adult Novels
-            </h2>
-            <div className="w-24 h-[1px] bg-sun-red mx-auto mb-8"></div>
-            <p className="text-lg text-ink-light font-light leading-relaxed max-w-2xl mx-auto">
-              Coming-of-age stories exploring identity, purpose, and the extraordinary within the ordinary.
-            </p>
-          </div>
-
-          <BookSlideshow books={youngAdultBooks} />
-        </div>
-
-        {/* Contact Footer */}
-        <div className="absolute bottom-4 right-4 text-ink/60 font-body text-sm">
-          Email: Contact details coming soon
-        </div>
       </section>
     </div>
   );
