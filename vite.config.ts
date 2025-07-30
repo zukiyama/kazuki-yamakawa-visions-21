@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: '/kazuki-yamakawa-visions/',
+  base: mode === 'production' ? '/kazuki-yamakawa-visions/' : '/',
   plugins: [
     react(),
     mode === 'development' &&
