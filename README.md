@@ -1,7 +1,7 @@
 # Welcome to your Lovable project
 
 ## Project info
-t
+tg
 
 **URL**: https://lovable.dev/projects/c3a83257-2f35-493d-aa59-cc4943dcf81e
 
