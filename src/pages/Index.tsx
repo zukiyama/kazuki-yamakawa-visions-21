@@ -1,144 +1,160 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import heroMountainRiver from '../assets/hero-mountain-river-indigo.jpg';
+import canvasPainting from '../assets/canvas-painting-3d.jpg';
 import chineseObjects from '../assets/chinese-objects-overhead.jpg';
-import fallingObjectsBg from '../assets/falling-objects-bg.jpg';
+import retroMagazine from '../assets/retro-magazine-cover.jpg';
+import shadowBoy from '../assets/shadow-boy.jpg';
 
 const Index = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [showQuote, setShowQuote] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      // Show quote when magazine cover is fully in view
+      if (window.scrollY > 400) {
+        setShowQuote(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const magazineTransform = Math.max(0, 100 - (scrollY * 0.1));
+
   return (
     <div className="min-h-screen bg-gradient-paper">
       <Navigation />
       
-      {/* Hero Section */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden"
-        style={{
-          backgroundImage: `url(${heroMountainRiver})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
-        {/* Canvas Texture Overlay */}
-        <div className="absolute inset-0 bg-paper/60 mix-blend-overlay"></div>
-        
-        {/* Chinese Objects Floating */}
+      {/* Canvas Painting Layer - Fixed Background */}
+      <section className="relative min-h-screen overflow-hidden">
+        {/* Main Canvas Painting */}
         <div 
-          className="absolute top-10 right-10 w-32 h-32 opacity-70 animate-float-gentle"
+          className="fixed inset-0 w-full h-full"
           style={{
-            backgroundImage: `url(${chineseObjects})`,
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center'
-          }}
-        />
-        <div 
-          className="absolute bottom-20 left-10 w-24 h-24 opacity-60 animate-sway"
-          style={{
-            backgroundImage: `url(${chineseObjects})`,
-            backgroundSize: 'contain',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            transform: 'rotate(-15deg)'
-          }}
-        />
-        
-        {/* Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-          <h1 className="text-5xl md:text-7xl font-light text-ink mb-8 font-elegant tracking-wide">
-            KAZUKI
-            <span className="block text-3xl md:text-5xl font-extralight text-ink-light mt-2 tracking-[0.2em]">
-              YAMAKAWA
-            </span>
-          </h1>
-          
-          <div className="w-32 h-[1px] bg-sun-red mx-auto mb-8"></div>
-          
-          <p className="text-xl md:text-2xl font-light text-ink-light leading-relaxed mb-12 max-w-2xl mx-auto font-body">
-            Writer. Musician. Creator of stories that blur the line between dreams and reality.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link 
-              to="/about"
-              className="group bg-gradient-ink text-primary-foreground px-8 py-4 rounded-sm font-elegant tracking-wide transition-all duration-300 hover:shadow-ink hover:scale-105"
-            >
-              Discover My Writing
-              <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
-            </Link>
-            <Link 
-              to="/music"
-              className="group border border-ink text-ink px-8 py-4 rounded-sm font-elegant tracking-wide transition-all duration-300 hover:bg-ink hover:text-primary-foreground hover:shadow-ink"
-            >
-              Listen to Music
-              <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">♪</span>
-            </Link>
-            <Link 
-              to="/comic"
-              className="group border border-ink text-ink px-8 py-4 rounded-sm font-elegant tracking-wide transition-all duration-300 hover:bg-ink hover:text-primary-foreground hover:shadow-ink"
-            >
-              Read Web Comics
-              <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">◯</span>
-            </Link>
-          </div>
-        </div>
-        
-      </section>
-      
-      {/* About Preview */}
-      <section className="relative py-20 bg-card overflow-hidden">
-        {/* Falling Objects Background - Bottom Half */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{
-            backgroundImage: `url(${fallingObjectsBg})`,
+            backgroundImage: `url(${canvasPainting})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            zIndex: 1
           }}
         />
-        
-        <div className="relative z-10 max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="bg-paper/80 backdrop-blur-sm p-8 rounded-sm">
-              <h2 className="text-3xl md:text-4xl font-light text-ink mb-6 font-elegant">
-                Crafting Stories
-              </h2>
-              <p className="text-lg text-ink-light leading-relaxed mb-8 font-body">
-                Through minimalist prose and evocative songwriting, I explore the 
-                complex emotions that define our most intimate moments. Each piece 
-                is an invitation to feel deeply and think differently.
-              </p>
-              <Link 
-                to="/about"
-                className="inline-flex items-center text-sun-red font-elegant tracking-wide hover:text-ink transition-colors duration-300"
-              >
-                Read More About My Work
-                <span className="ml-2">→</span>
-              </Link>
-            </div>
-            <div className="relative">
-              <div className="aspect-square bg-gradient-ink/90 backdrop-blur-sm rounded-sm shadow-ink p-12 flex items-center justify-center">
-                <div className="text-center text-primary-foreground">
-                  <div className="text-6xl font-light mb-4 font-elegant">"</div>
-                  <p className="text-lg font-light leading-relaxed font-body">
-                    In the space between
-                    <br />
-                    breath and word,
-                    <br />
-                    truth lives quietly.
-                  </p>
-                </div>
+
+        {/* Chinese Objects Around Edges */}
+        <div 
+          className="fixed inset-0 w-full h-full opacity-80"
+          style={{
+            backgroundImage: `url(${chineseObjects})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            zIndex: 2
+          }}
+        />
+
+        {/* PARABLE Title */}
+        <div className="fixed inset-0 flex items-center justify-center z-30">
+          <h1 className="text-8xl md:text-9xl font-elegant text-paper drop-shadow-lg tracking-wider">
+            PARABLE
+          </h1>
+        </div>
+
+        {/* Magazine Cover Layer - Animated */}
+        <div 
+          className="absolute inset-0 w-full h-full transition-transform duration-1000 ease-out"
+          style={{
+            transform: `translateY(${magazineTransform}%)`,
+            zIndex: 10
+          }}
+        >
+          {/* Magazine Cover */}
+          <div 
+            className="w-full h-full relative"
+            style={{
+              backgroundImage: `url(${retroMagazine})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          >
+            {/* PARABLE Cutout Letters - Top Right */}
+            <div className="absolute top-16 right-16 z-20">
+              <div className="text-6xl md:text-8xl font-elegant text-paper font-bold leading-tight">
+                <div className="mb-2">PAR</div>
+                <div className="ml-8 mb-2">AB</div>
+                <div className="ml-16">LE</div>
               </div>
             </div>
+
+            {/* Pencil Sketch Layer Underneath */}
+            <div 
+              className="absolute inset-0 opacity-60 mix-blend-multiply"
+              style={{
+                backgroundImage: `url(${shadowBoy})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            />
           </div>
         </div>
-        
-        {/* Contact Footer */}
-        <div className="absolute bottom-4 right-4 text-ink/60 font-body text-sm">
-          Email: Contact details coming soon
+
+        {/* Floating Quote */}
+        <div 
+          className={`fixed inset-0 flex items-center justify-center z-40 transition-opacity duration-2000 ${
+            showQuote ? 'opacity-100' : 'opacity-0'
+          }`}
+        >
+          <div className="text-center max-w-2xl px-6">
+            <div className="font-body text-2xl md:text-3xl text-ink leading-relaxed">
+              <span className="italic text-3xl">feelings</span>
+              <span className="text-xl ml-2 relative top-1">are the</span>
+              <span className="text-4xl ml-2 font-elegant">thoughts</span>
+              <br />
+              <span className="text-2xl">of the</span>
+              <span className="italic text-5xl ml-2 text-sun-red">heart</span>
+            </div>
+          </div>
         </div>
+
+        {/* Spacer for scroll effect */}
+        <div className="h-[200vh]"></div>
       </section>
+
+      {/* Navigation Buttons - Always Visible */}
+      <div className="fixed bottom-12 left-1/2 transform -translate-x-1/2 z-50">
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link 
+            to="/about"
+            className="group bg-paper/90 backdrop-blur-sm text-ink px-6 py-3 rounded-sm font-elegant tracking-wide transition-all duration-300 hover:shadow-ink hover:scale-105 border border-ink/20"
+          >
+            Discover My Writing
+            <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </Link>
+          <Link 
+            to="/music"
+            className="group bg-paper/90 backdrop-blur-sm text-ink px-6 py-3 rounded-sm font-elegant tracking-wide transition-all duration-300 hover:shadow-ink hover:scale-105 border border-ink/20"
+          >
+            Listen to Music
+            <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">♪</span>
+          </Link>
+          <Link 
+            to="/comic"
+            className="group bg-paper/90 backdrop-blur-sm text-ink px-6 py-3 rounded-sm font-elegant tracking-wide transition-all duration-300 hover:shadow-ink hover:scale-105 border border-ink/20"
+          >
+            Read Web Comics
+            <span className="inline-block ml-2 transition-transform duration-300 group-hover:translate-x-1">◯</span>
+          </Link>
+        </div>
+      </div>
+
+      {/* Contact Footer */}
+      <div className="fixed bottom-4 right-4 text-ink/60 font-body text-sm z-50 bg-paper/80 backdrop-blur-sm px-3 py-1 rounded">
+        Email: Contact details coming soon
+      </div>
     </div>
   );
 };
