@@ -1,23 +1,11 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import BookSlideshow from '../components/BookSlideshow';
-import toFlyCover from '../assets/to-fly-cover.jpg';
-import professorBarnabasCover from '../assets/professor-barnabas-cover.jpg';
-import landDreamSkyCover from '../assets/land-dream-sky-cover.jpg';
-import africanGirlProfile from '../assets/african-girl-profile.jpg';
-import boysGroup from '../assets/boys-group.jpg';
-import playgroundScene from '../assets/playground-scene.jpg';
-import shoppingStreet from '../assets/shopping-street.jpg';
-import shadowBoy from '../assets/shadow-boy.jpg';
-import businessmanWindow from '../assets/businessman-window.jpg';
-import policeOfficer from '../assets/police-officer.jpg';
-import paradeScene from '../assets/parade-scene.jpg';
-import seventiesObjects from '../assets/70s-objects.jpg';
-import boysWalkingBehind from '../assets/boys-walking-behind.jpg';
-import kyotoMonsterView from '../assets/kyoto-monster-view.jpg';
-import hoaxCommune from '../assets/hoax-commune.jpg';
+import KaijuSlideshow from '../components/KaijuSlideshow';
 import toFlyNew from '../assets/to-fly-cover-new.jpg';
+import professorBarnabasCover from '../assets/professor-barnabas-cover.jpg';
 import landDreamSkyNew from '../assets/land-dream-sky-cover-new.jpg';
+import hoaxCommune from '../assets/hoax-commune.jpg';
 import hoaxAustraliaBg from '../assets/hoax-australia-bg.jpg';
 import obaZimbabweBg from '../assets/oba-zimbabwe-bg.jpg';
 import siphonTvBg from '../assets/siphon-tv-bg.jpg';
@@ -43,108 +31,35 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-paper relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-paper relative">
       <Navigation />
       
       {/* KAIJU Section */}
       <section className="relative min-h-screen">
-        <div 
-          className="fixed inset-0 opacity-20 bg-cover bg-center z-0"
-          style={{
-            backgroundImage: `url(${seventiesObjects})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        />
-        
-        <main className="relative z-10 pt-32 pb-20">
-          <div className="max-w-7xl mx-auto px-6">
-            {/* Header */}
-            <div className="text-center mb-20">
-              <div className="bg-white/10 backdrop-blur-sm rounded-sm p-8 inline-block">
-                <h1 className="text-4xl md:text-6xl font-light text-ink mb-6 font-japanese tracking-wide">
-                  PARABLE
-                </h1>
-                <h2 className="text-2xl md:text-3xl font-light text-ink mb-4 font-serif">
-                  BOOK ONE
-                </h2>
-                <h3 className="text-xl md:text-2xl font-light text-ink mb-4 font-japanese">
-                  KAIJU
-                </h3>
-                <p className="text-lg text-ink-light font-light">
-                  COMING SOON
-                </p>
-              </div>
-            </div>
-
-            {/* Images scattered like Polaroids */}
-            <div className="relative min-h-[800px]">
-              {/* Boys Group */}
-              <div className="absolute top-20 left-10 transform rotate-2 hover:rotate-0 transition-transform duration-300">
-                <div className="bg-white p-4 shadow-lg rounded-sm">
-                  <img 
-                    src={boysGroup} 
-                    alt="Boys walking in small Japanese town" 
-                    className="w-80 h-52 object-cover mb-2"
-                  />
-                  
-                </div>
-              </div>
-
-              {/* Police Officer */}
-              <div className="absolute top-40 right-16 transform -rotate-1 hover:rotate-0 transition-transform duration-300">
-                <div className="bg-white p-4 shadow-lg rounded-sm">
-                  <img 
-                    src={policeOfficer} 
-                    alt="Police officer with robot in desert" 
-                    className="w-80 h-52 object-cover mb-2"
-                  />
-                  
-                </div>
-              </div>
-
-              {/* Parade Scene */}
-              <div className="absolute bottom-32 left-16 transform rotate-1 hover:rotate-0 transition-transform duration-300">
-                <div className="bg-white p-4 shadow-lg rounded-sm">
-                  <img 
-                    src={paradeScene} 
-                    alt="Festival parade with strange floats" 
-                    className="w-96 h-64 object-cover mb-2"
-                  />
-                  
-                </div>
-              </div>
-
-              {/* Boys Walking Behind */}
-              <div className="absolute bottom-32 right-16 transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                <div className="bg-white p-4 shadow-lg rounded-sm">
-                  <img 
-                    src={boysWalkingBehind} 
-                    alt="Boys walking behind in Japanese town" 
-                    className="w-80 h-52 object-cover mb-2"
-                  />
-                  
-                </div>
-              </div>
-
-              {/* Story Summary - Center */}
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div className="bg-card/95 rounded-sm shadow-soft p-8 backdrop-blur-sm text-center max-w-lg">
-                  <h2 className="text-2xl font-serif text-ink mb-4">KAIJU</h2>
-                  <p className="text-lg text-ink-light mb-3">A metaphysical fantasy</p>
-                  <div className="w-16 h-[1px] bg-sun-red mx-auto mb-6"></div>
-                  <p className="text-sm text-ink leading-relaxed mb-4">
-                    In a small Japanese town in the summer of 1979, three boys discover that nothing is as it seems. 
-                    Everyone's memories are fragmented—no one can remember how they ended up in this place.
-                  </p>
-                  <p className="text-sm text-ink-light leading-relaxed">
-                    A metaphysical fantasy exploring themes of memory, identity, and the thin line between the ordinary and extraordinary.
-                  </p>
-                </div>
-              </div>
+        {/* Header with larger text */}
+        <div className="relative z-20 pt-32 pb-12">
+          <div className="max-w-7xl mx-auto px-6 text-center">
+            <div className="bg-white/20 backdrop-blur-sm rounded-sm p-12 inline-block">
+              <h2 className="text-3xl md:text-4xl font-elegant text-ink mb-4">KAIJU</h2>
+              <h3 className="text-xl md:text-2xl font-serif text-ink mb-4">PARABLE BOOK ONE</h3>
+              <p className="text-lg text-ink-light mb-3">A metaphysical fantasy</p>
+              <div className="w-20 h-[2px] bg-sun-red mx-auto mb-6"></div>
+              <p className="text-lg text-ink leading-relaxed mb-4 max-w-3xl">
+                In a small Japanese town in the summer of 1979, three boys discover that nothing is as it seems. 
+                Everyone's memories are fragmented—no one can remember how they ended up in this place.
+              </p>
+              <p className="text-lg text-ink-light leading-relaxed max-w-3xl">
+                A metaphysical fantasy exploring themes of memory, identity, and the thin line between the ordinary and extraordinary.
+              </p>
+              <p className="text-lg text-ink-light font-light mt-6">
+                COMING SOON
+              </p>
             </div>
           </div>
-        </main>
+        </div>
+
+        {/* Full-screen slideshow */}
+        <KaijuSlideshow />
       </section>
 
       {/* HOAX Section */}
@@ -157,7 +72,7 @@ const About = () => {
             backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 bg-paper/70 z-0"></div>
+        <div className="absolute inset-0 bg-paper/50 z-0"></div>
         
         <main className="relative z-10 pt-32 pb-20">
           <div className="max-w-7xl mx-auto px-6">
@@ -172,7 +87,7 @@ const About = () => {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <div className="bg-card/95 rounded-sm shadow-soft p-12 backdrop-blur-sm text-center">
+              <div className="bg-card/80 rounded-sm shadow-soft p-12 backdrop-blur-sm text-center">
                 <p className="text-lg text-ink leading-relaxed mb-6">
                   Peter Carlisle wrote a book when he was down and out—a hoax about a cult and spiritual beliefs. 
                   It became an overnight success, then an equally quick failure. Now he's fleeing to Australia when he gets a phone call.
@@ -212,7 +127,7 @@ const About = () => {
             backgroundRepeat: 'no-repeat'
           }}
         />
-        <div className="absolute inset-0 bg-paper/70 z-[2]"></div>
+        <div className="absolute inset-0 bg-paper/50 z-[2]"></div>
         
         <main className="relative z-10 pt-32 pb-20">
           <div className="max-w-7xl mx-auto px-6">
@@ -227,7 +142,7 @@ const About = () => {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <div className="bg-card/95 rounded-sm shadow-soft p-12 backdrop-blur-sm text-center">
+              <div className="bg-card/80 rounded-sm shadow-soft p-12 backdrop-blur-sm text-center">
                 <p className="text-lg text-ink leading-relaxed mb-6">
                   Tinashe returns to his home village in Zimbabwe, embarrassed by his background. 
                   The village sits on the edge of a burning mangrove forest, and he's there to teach a mute girl named Oba.
@@ -256,7 +171,7 @@ const About = () => {
             backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 bg-paper/70 z-0"></div>
+        <div className="absolute inset-0 bg-paper/50 z-0"></div>
         
         <main className="relative z-10 pt-32 pb-20">
           <div className="max-w-7xl mx-auto px-6">
@@ -271,7 +186,7 @@ const About = () => {
             </div>
 
             <div className="max-w-4xl mx-auto">
-              <div className="bg-card/95 rounded-sm shadow-soft p-12 backdrop-blur-sm text-center">
+              <div className="bg-card/80 rounded-sm shadow-soft p-12 backdrop-blur-sm text-center">
                 <p className="text-lg text-ink leading-relaxed mb-6">
                   Elliott Park suddenly remembers the Siphons—a strange, half-animated children's show he swears he watched as a child. 
                   The details are vivid, but when he mentions it to friends and family, no one recalls it.
@@ -307,8 +222,10 @@ const About = () => {
         </div>
 
         {/* Contact Footer */}
-        <div className="absolute bottom-4 right-4 text-ink/60 font-body text-sm">
-          Email: Contact details coming soon
+        <div className="text-center py-8">
+          <p className="text-ink/60 font-body text-sm">
+            Email: Contact details coming soon
+          </p>
         </div>
       </section>
     </div>

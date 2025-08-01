@@ -1,9 +1,9 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import characterSketches from '../assets/character-sketches.jpg';
-import godOfLiesCover from '../assets/god-of-lies-cover-new.jpg';
-import soulTiedCover from '../assets/seoul-tied-cover.jpg';
-import burdenCover from '../assets/burden-cover-new.jpg';
+import godOfLiesCover from '../assets/god-of-lies-cover-updated.jpg';
+import soulTiedCover from '../assets/soul-tied-cover-new.jpg';
+import burdenCover from '../assets/burden-cover-updated.jpg';
 
 const Comic = () => {
   return (
@@ -79,7 +79,7 @@ const Comic = () => {
             {/* Story Summary */}
             <div className="bg-card/90 rounded-sm shadow-soft p-8 backdrop-blur-sm">
               <h2 className="text-3xl font-light text-ink mb-6 font-elegant">
-                Seoul Tied
+                Soul Tied
               </h2>
               <div className="w-16 h-[1px] bg-sun-red mb-6"></div>
               <p className="text-lg text-ink leading-relaxed mb-4 font-body">
@@ -100,7 +100,7 @@ const Comic = () => {
               <div className="bg-card rounded-sm shadow-ink overflow-hidden hover:shadow-sun-red/20 transition-all duration-300 transform hover:scale-105">
                 <img 
                   src={soulTiedCover} 
-                  alt="Seoul Tied webtoon cover"
+                  alt="Soul Tied webtoon cover"
                   className="w-full max-w-sm h-auto object-cover"
                 />
               </div>
@@ -143,8 +143,10 @@ const Comic = () => {
         </div>
 
         {/* Contact Footer */}
-        <div className="absolute bottom-4 right-4 text-ink/60 font-body text-sm">
-          Email: Contact details coming soon
+        <div className="text-center py-8">
+          <p className="text-ink/60 font-body text-sm">
+            Email: Contact details coming soon
+          </p>
         </div>
       </main>
     </div>

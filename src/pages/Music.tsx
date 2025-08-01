@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
-import musicRoomGarden from '../assets/music-room-garden.jpg';
+import TapeDeckPlayer from '../components/TapeDeckPlayer';
+import musicRoomSketchGarden from '../assets/music-room-sketch-garden.jpg';
 import tvShopBoys from '../assets/tv-shop-boys.jpg';
-import animalOrchestra from '../assets/animal-orchestra-sketch.jpg';
 
 const Music = () => {
   const [selectedTrack, setSelectedTrack] = useState(0);
@@ -42,13 +42,18 @@ const Music = () => {
           {/* Music Room Section */}
           <div className="mb-20 relative">
             <div className="bg-paper/90 backdrop-blur-sm rounded-sm shadow-soft overflow-hidden">
-              {/* Single Multimedia Image - Pencil Sketch Room with Photographic Garden */}
+              {/* Pencil Sketch Room with Large Garden Opening */}
               <img 
-                src={musicRoomGarden} 
-                alt="Music room with garden view" 
+                src={musicRoomSketchGarden} 
+                alt="Pencil sketch music room with mansion garden view" 
                 className="w-full h-auto object-cover"
               />
             </div>
+          </div>
+
+          {/* Embedded Video Player - Tape Deck Style */}
+          <div className="mb-20">
+            <TapeDeckPlayer />
           </div>
 
 
@@ -77,19 +82,6 @@ const Music = () => {
             </div>
           </div>
 
-          {/* Animal Orchestra Section */}
-          <div className="mt-20 mb-16">
-            <div className="max-w-4xl mx-auto bg-paper/95 backdrop-blur-sm rounded-sm shadow-soft p-8">
-              <h3 className="text-2xl font-elegant text-ink mb-6 text-center">The Orchestra</h3>
-              <div className="relative overflow-hidden rounded-sm">
-                <img 
-                  src={animalOrchestra} 
-                  alt="Surreal animal orchestra with fantastical instruments" 
-                  className="w-full h-auto object-cover opacity-90 hover:opacity-100 transition-opacity duration-300"
-                />
-              </div>
-            </div>
-          </div>
 
           {/* Decorative Elements */}
           <div className="fixed bottom-8 left-8 w-12 h-8 opacity-40">
@@ -101,8 +93,10 @@ const Music = () => {
         </div>
 
         {/* Contact Footer */}
-        <div className="absolute bottom-4 right-4 text-ink/60 font-body text-sm">
-          Email: Contact details coming soon
+        <div className="text-center py-8">
+          <p className="text-ink/60 font-body text-sm">
+            Email: Contact details coming soon
+          </p>
         </div>
       </main>
 
