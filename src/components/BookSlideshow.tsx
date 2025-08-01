@@ -37,33 +37,35 @@ const BookSlideshow: React.FC<BookSlideshowProps> = ({ books }) => {
   const isEvenIndex = currentIndex % 2 === 0;
 
   return (
-    <div className="relative bg-card/90 backdrop-blur-sm rounded-sm shadow-soft overflow-hidden">
-      <div className="grid md:grid-cols-2 gap-0 min-h-[400px]">
+    <div className="relative bg-card/90 backdrop-blur-sm rounded-sm shadow-elegant overflow-hidden max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-0 h-[500px]">
         {/* Book Cover - Left on even, Right on odd */}
-        <div className={`relative ${isEvenIndex ? 'order-1' : 'order-2'}`}>
-          <div className="h-full flex items-center justify-center p-8">
+        <div className={`relative ${isEvenIndex ? 'order-1' : 'order-2'} transition-opacity duration-1000 ease-in-out`}>
+          <div className="h-full flex items-center justify-center p-12">
             <div className="relative group">
               <img 
                 src={currentBook.cover} 
                 alt={`${currentBook.title} cover`} 
-                className="max-w-xs h-auto object-cover shadow-ink rounded-sm transition-transform duration-300 group-hover:scale-105"
+                className="w-64 h-80 object-cover shadow-elegant rounded-sm transition-all duration-500 group-hover:scale-105 group-hover:shadow-glow"
               />
               {/* 3D Book Effect */}
-              <div className="absolute top-2 left-2 w-full h-full bg-ink/20 rounded-sm -z-10"></div>
+              <div className="absolute top-3 left-3 w-full h-full bg-ink/30 rounded-sm -z-10"></div>
             </div>
           </div>
         </div>
 
         {/* Book Summary - Right on even, Left on odd */}
-        <div className={`flex items-center p-8 ${isEvenIndex ? 'order-2' : 'order-1'}`}>
-          <div>
-            <h3 className="text-2xl font-elegant text-ink mb-4">
+        <div className={`flex items-center p-12 ${isEvenIndex ? 'order-2' : 'order-1'} transition-opacity duration-1000 ease-in-out`}>
+          <div className="w-full">
+            <h3 className="text-3xl font-serif text-ink mb-6 tracking-wide">
               {currentBook.title}
             </h3>
-            <div className="w-16 h-[1px] bg-sun-red mb-6"></div>
-            <p className="text-lg text-ink leading-relaxed font-body">
-              {currentBook.summary}
-            </p>
+            <div className="w-20 h-[2px] bg-sun-red mb-8"></div>
+            <div className="h-48 overflow-hidden">
+              <p className="text-base text-ink leading-relaxed font-serif">
+                {currentBook.summary}
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -71,35 +73,35 @@ const BookSlideshow: React.FC<BookSlideshowProps> = ({ books }) => {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-ink/80 text-primary-foreground p-2 rounded-full hover:bg-ink transition-all duration-300 hover:scale-110"
+        className="absolute left-6 top-1/2 -translate-y-1/2 bg-ink/90 text-paper p-3 rounded-full hover:bg-ink transition-all duration-300 hover:scale-110 shadow-elegant backdrop-blur-sm"
       >
-        <ChevronLeft size={20} />
+        <ChevronLeft size={24} />
       </button>
       
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-ink/80 text-primary-foreground p-2 rounded-full hover:bg-ink transition-all duration-300 hover:scale-110"
+        className="absolute right-6 top-1/2 -translate-y-1/2 bg-ink/90 text-paper p-3 rounded-full hover:bg-ink transition-all duration-300 hover:scale-110 shadow-elegant backdrop-blur-sm"
       >
-        <ChevronRight size={20} />
+        <ChevronRight size={24} />
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3">
         {books.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentIndex ? 'bg-sun-red' : 'bg-ink/40'
+            className={`w-3 h-3 rounded-full transition-all duration-500 ${
+              index === currentIndex ? 'bg-sun-red scale-125' : 'bg-ink/50 hover:bg-ink/70'
             }`}
           />
         ))}
       </div>
 
       {/* Progress Bar */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-ink/20">
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-ink/30">
         <div 
-          className="h-full bg-sun-red transition-all duration-300"
+          className="h-full bg-gradient-to-r from-sun-red to-primary transition-all duration-1000 ease-out"
           style={{ width: `${((currentIndex + 1) / books.length) * 100}%` }}
         />
       </div>

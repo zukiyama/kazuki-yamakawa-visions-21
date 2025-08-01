@@ -19,9 +19,9 @@ import hoaxCommune from '../assets/hoax-commune.jpg';
 import toFlyNew from '../assets/to-fly-cover-new.jpg';
 import landDreamSkyNew from '../assets/land-dream-sky-cover-new.jpg';
 import hoaxAustraliaBg from '../assets/hoax-australia-bg.jpg';
-import marketCorporateBg from '../assets/market-corporate-bg.jpg';
 import obaZimbabweBg from '../assets/oba-zimbabwe-bg.jpg';
 import siphonTvBg from '../assets/siphon-tv-bg.jpg';
+import youngGirlProfile from '../assets/young-girl-profile.jpg';
 
 const About = () => {
   const youngAdultBooks = [
@@ -65,8 +65,8 @@ const About = () => {
                 <h1 className="text-4xl md:text-6xl font-light text-ink mb-6 font-japanese tracking-wide">
                   PARABLE
                 </h1>
-                <h2 className="text-2xl md:text-3xl font-light text-ink mb-4 font-japanese">
-                  BOOK ONE OF THE PARABLE TRILOGY
+                <h2 className="text-2xl md:text-3xl font-light text-ink mb-4 font-serif">
+                  BOOK ONE
                 </h2>
                 <h3 className="text-xl md:text-2xl font-light text-ink mb-4 font-japanese">
                   KAIJU
@@ -104,7 +104,7 @@ const About = () => {
               </div>
 
               {/* Parade Scene */}
-              <div className="absolute bottom-20 left-1/3 transform rotate-1 hover:rotate-0 transition-transform duration-300">
+              <div className="absolute bottom-32 left-16 transform rotate-1 hover:rotate-0 transition-transform duration-300">
                 <div className="bg-white p-4 shadow-lg rounded-sm">
                   <img 
                     src={paradeScene} 
@@ -116,7 +116,7 @@ const About = () => {
               </div>
 
               {/* Boys Walking Behind */}
-              <div className="absolute bottom-40 right-20 transform rotate-3 hover:rotate-0 transition-transform duration-300">
+              <div className="absolute bottom-32 right-16 transform rotate-3 hover:rotate-0 transition-transform duration-300">
                 <div className="bg-white p-4 shadow-lg rounded-sm">
                   <img 
                     src={boysWalkingBehind} 
@@ -130,8 +130,8 @@ const About = () => {
               {/* Story Summary - Center */}
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                 <div className="bg-card/95 rounded-sm shadow-soft p-8 backdrop-blur-sm text-center max-w-lg">
-                  <h2 className="text-2xl font-light text-ink mb-4 font-japanese">KAIJU</h2>
-                  <p className="text-lg text-ink-light mb-3">First book of the Parable Trilogy</p>
+                  <h2 className="text-2xl font-serif text-ink mb-4">KAIJU</h2>
+                  <p className="text-lg text-ink-light mb-3">A metaphysical fantasy</p>
                   <div className="w-16 h-[1px] bg-sun-red mx-auto mb-6"></div>
                   <p className="text-sm text-ink leading-relaxed mb-4">
                     In a small Japanese town in the summer of 1979, three boys discover that nothing is as it seems. 
@@ -162,12 +162,12 @@ const About = () => {
         <main className="relative z-10 pt-32 pb-20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-20">
-              <h1 className="text-4xl md:text-6xl font-light text-ink mb-6 font-japanese tracking-wide">
+              <h1 className="text-4xl md:text-6xl font-serif text-ink mb-6 tracking-wide">
                 HOAX
               </h1>
               <div className="w-24 h-[1px] bg-sun-red mx-auto mb-8"></div>
-              <p className="text-xl text-ink-light font-light leading-relaxed max-w-3xl mx-auto">
-                Second book of the Parable Trilogy
+              <p className="text-xl text-ink-light font-serif leading-relaxed max-w-3xl mx-auto">
+                A standalone novel
               </p>
             </div>
 
@@ -191,71 +191,6 @@ const About = () => {
         </main>
       </section>
 
-      {/* THE MARKET Section */}
-      <section className="relative min-h-screen">
-        <div 
-          className="absolute inset-0 bg-cover bg-center z-0"
-          style={{
-            backgroundImage: `url(${marketCorporateBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center'
-          }}
-        />
-        <div className="absolute inset-0 bg-paper/70 z-0"></div>
-        
-        <main className="relative z-10 pt-32 pb-20">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-20">
-              <h1 className="text-4xl md:text-6xl font-light text-ink mb-6 font-japanese tracking-wide">
-                THE MARKET
-              </h1>
-              <div className="w-24 h-[1px] bg-sun-red mx-auto mb-8"></div>
-              <p className="text-xl text-ink-light font-light leading-relaxed max-w-3xl mx-auto">
-                Third book of the Parable Trilogy
-              </p>
-            </div>
-
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-card/95 rounded-sm shadow-soft p-12 backdrop-blur-sm text-center">
-                <p className="text-lg text-ink leading-relaxed mb-6">
-                  James Wilder leaves England after his girlfriend abandons him for an amazing opportunity. 
-                  He travels to Larissa—the world's first entirely corporate nation, with its own strange culture and heritage.
-                </p>
-                <p className="text-lg text-ink leading-relaxed mb-6">
-                  While there, he discovers technologies and systems that make him question everything. 
-                  The artificial intelligence software he studies leads him to a disturbing realization.
-                </p>
-                <p className="text-lg text-ink-light leading-relaxed">
-                  It's not just that this corporate nation is artificial—something far beyond it, 
-                  something fundamental about reality itself, might be fake.
-                </p>
-              </div>
-            </div>
-          </div>
-        </main>
-      </section>
-
-      {/* Young Adult Novels Slideshow Section */}
-      <section className="relative min-h-screen bg-gradient-soft overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-ink mb-6 font-japanese tracking-wide">
-              Young Adult Novels
-            </h2>
-            <div className="w-24 h-[1px] bg-sun-red mx-auto mb-8"></div>
-            <p className="text-lg text-ink-light font-light leading-relaxed max-w-2xl mx-auto">
-              Coming-of-age stories exploring identity, purpose, and the extraordinary within the ordinary.
-            </p>
-          </div>
-
-          <BookSlideshow books={youngAdultBooks} />
-        </div>
-
-        {/* Contact Footer */}
-        <div className="absolute bottom-4 right-4 text-ink/60 font-body text-sm">
-          Email: Contact details coming soon
-        </div>
-      </section>
 
       {/* OBA Section */}
       <section className="relative min-h-screen">
@@ -267,17 +202,27 @@ const About = () => {
             backgroundPosition: 'center'
           }}
         />
-        <div className="absolute inset-0 bg-paper/70 z-0"></div>
+        {/* Semi-transparent girl profile overlay on left side */}
+        <div 
+          className="absolute inset-0 bg-cover bg-left opacity-40 z-[1]"
+          style={{
+            backgroundImage: `url(${youngGirlProfile})`,
+            backgroundSize: 'auto 100%',
+            backgroundPosition: 'left center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        />
+        <div className="absolute inset-0 bg-paper/70 z-[2]"></div>
         
         <main className="relative z-10 pt-32 pb-20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-20">
-              <h1 className="text-4xl md:text-6xl font-light text-ink mb-6 font-japanese tracking-wide">
+              <h1 className="text-4xl md:text-6xl font-serif text-ink mb-6 tracking-wide">
                 OBA
               </h1>
               <div className="w-24 h-[1px] bg-sun-red mx-auto mb-8"></div>
-              <p className="text-xl text-ink-light font-light leading-relaxed max-w-3xl mx-auto">
-                Fourth book of the Parable Trilogy
+              <p className="text-xl text-ink-light font-serif leading-relaxed max-w-3xl mx-auto">
+                A standalone novel
               </p>
             </div>
 
@@ -316,11 +261,11 @@ const About = () => {
         <main className="relative z-10 pt-32 pb-20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-20">
-              <h1 className="text-4xl md:text-6xl font-light text-ink mb-6 font-japanese tracking-wide">
+              <h1 className="text-4xl md:text-6xl font-serif text-ink mb-6 tracking-wide">
                 THE SIPHON
               </h1>
               <div className="w-24 h-[1px] bg-sun-red mx-auto mb-8"></div>
-              <p className="text-xl text-ink-light font-light leading-relaxed max-w-3xl mx-auto">
+              <p className="text-xl text-ink-light font-serif leading-relaxed max-w-3xl mx-auto">
                 A standalone novel
               </p>
             </div>
@@ -343,6 +288,28 @@ const About = () => {
             </div>
           </div>
         </main>
+      </section>
+
+      {/* Young Adult Novels Slideshow Section - Moved to bottom */}
+      <section className="relative min-h-screen bg-gradient-soft overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif text-ink mb-6 tracking-wide">
+              Young Adult Novels
+            </h2>
+            <div className="w-24 h-[1px] bg-sun-red mx-auto mb-8"></div>
+            <p className="text-lg text-ink-light font-serif leading-relaxed max-w-2xl mx-auto">
+              Coming-of-age stories exploring identity, purpose, and the extraordinary within the ordinary.
+            </p>
+          </div>
+
+          <BookSlideshow books={youngAdultBooks} />
+        </div>
+
+        {/* Contact Footer */}
+        <div className="absolute bottom-4 right-4 text-ink/60 font-body text-sm">
+          Email: Contact details coming soon
+        </div>
       </section>
     </div>
   );
