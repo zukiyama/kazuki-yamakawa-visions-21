@@ -4,49 +4,21 @@ import characterSketches from '../assets/character-sketches.jpg';
 import godOfLiesCover from '../assets/god-of-lies-cover-updated.jpg';
 import soulTiedCover from '../assets/soul-tied-cover-new.jpg';
 import burdenCover from '../assets/burden-cover-updated.jpg';
-import comicSketchesBg from '../assets/comic-sketches-bg.jpg';
-import fallingObjectsBg from '../assets/falling-objects-bg.jpg';
 
 const Comic = () => {
   return (
     <div className="min-h-screen bg-gradient-paper relative overflow-hidden">
       <Navigation />
       
-      {/* Parallax Background Layers */}
-      <div className="fixed inset-0 z-0">
-        {/* Layer 1 - Deepest background */}
-        <div 
-          className="absolute inset-0 opacity-15 bg-cover bg-center transform-gpu"
-          style={{
-            backgroundImage: `url(${comicSketchesBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            transform: 'translateY(var(--scroll-y, 0) * 0.2px)'
-          }}
-        />
-        
-        {/* Layer 2 - Middle background */}
-        <div 
-          className="absolute inset-0 opacity-10 bg-cover bg-center transform-gpu"
-          style={{
-            backgroundImage: `url(${fallingObjectsBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            transform: 'translateY(var(--scroll-y, 0) * 0.4px)'
-          }}
-        />
-        
-        {/* Layer 3 - Character sketches */}
-        <div 
-          className="absolute inset-0 opacity-20 bg-cover bg-center transform-gpu"
-          style={{
-            backgroundImage: `url(${characterSketches})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            transform: 'translateY(var(--scroll-y, 0) * 0.6px)'
-          }}
-        />
-      </div>
+      {/* Background Character Sketches */}
+      <div 
+        className="fixed inset-0 opacity-20 bg-cover bg-center z-0 transform-gpu"
+        style={{
+          backgroundImage: `url(${characterSketches})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
       
       <main className="relative z-10 pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6">
