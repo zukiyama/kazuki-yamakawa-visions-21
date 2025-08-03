@@ -4,6 +4,8 @@ import characterSketches from '../assets/character-sketches.jpg';
 import godOfLiesCover from '../assets/god-of-lies-cover-updated.jpg';
 import soulTiedCover from '../assets/soul-tied-cover-new.jpg';
 import burdenCover from '../assets/burden-cover-updated.jpg';
+import comicSketchesBg from '../assets/comic-sketches-bg.jpg';
+import fallingObjectsBg from '../assets/falling-objects-bg.jpg';
 
 const Comic = () => {
   return (
@@ -16,7 +18,7 @@ const Comic = () => {
         <div 
           className="absolute inset-0 opacity-15 bg-cover bg-center transform-gpu"
           style={{
-            backgroundImage: `url(${require('../assets/comic-sketches-bg.jpg')})`,
+            backgroundImage: `url(${comicSketchesBg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateY(var(--scroll-y, 0) * 0.2px)'
@@ -27,7 +29,7 @@ const Comic = () => {
         <div 
           className="absolute inset-0 opacity-10 bg-cover bg-center transform-gpu"
           style={{
-            backgroundImage: `url(${require('../assets/falling-objects-bg.jpg')})`,
+            backgroundImage: `url(${fallingObjectsBg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             transform: 'translateY(var(--scroll-y, 0) * 0.4px)'
